@@ -14,6 +14,6 @@ git clone https://github.com/bnvkishore/roboshop-ansible-v3.git
 cd roboshop-ansible-v3
 git pull
 
-cp /home/ec2-user/.vault_pass /home/roboshop-ansible-v3/.vault_pass
-chmod 600 .vault_pass
+cp /home/ec2-user/.vault_pass /home/ec2-user/roboshop-ansible-v3/.vault_pass
+chmod 600 /home/ec2-user/roboshop-ansible-v3/.vault_pass
 ansible-playbook -e component=$component -e env=$env roboshop.yaml
