@@ -30,8 +30,8 @@ resource "terraform_data" "mongodb" {
   }
   
   provisioner "file" {
-    content = local.valut_pass
-    destination = "/home/ec2-user/.valut_pass"
+    content = local.vault_pass
+    destination = "/home/ec2-user/.vault_pass"
   }
 
   provisioner "remote-exec" {
