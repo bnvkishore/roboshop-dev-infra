@@ -8,4 +8,5 @@ locals {
         Environment = "${var.environment}"
         Terraform = true
     }
+    vault_pass = data.aws_ssm_parameter.vault_pass.value
 }

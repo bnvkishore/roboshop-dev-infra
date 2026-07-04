@@ -28,6 +28,11 @@ resource "terraform_data" "mongodb" {
     source      = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
   }
+  
+  provisioner "file" {
+    content = local.valut_pass
+    destination = "/home/ec2-user/.valut_pass"
+  }
 
   provisioner "remote-exec" {
     inline = [ 

@@ -6,6 +6,10 @@ data "aws_ssm_parameter" "database_subnet_ids" {
     name = "/${var.project}/${var.environment}/database_subnet_ids"
 }
 
+data "aws_ssm_parameter" "vault_pass" {
+    name = "/${var.project}/${var.environment}/valut_pass"
+}
+
 data "aws_ami" "joindevops" {
     most_recent = true
     owners = ["973714476881"]
