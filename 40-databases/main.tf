@@ -73,6 +73,11 @@ resource "terraform_data" "redis" {
     source      = "bootstrap.sh"
     destination = "/tmp/bootstrap.sh"
   }
+  
+  provisioner "file" {
+    content = local.vault_pass
+    destination = "/home/ec2-user/.vault_pass"
+  }
 
   provisioner "remote-exec" {
     inline = [ 
