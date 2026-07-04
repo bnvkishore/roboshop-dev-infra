@@ -5,13 +5,12 @@ terraform {
       version = "~>6.0"
     }
   }
-
   backend "s3" {
-    bucket       = "remote-state-aws90"
+    bucket       = "remote-state-daws90-dev"
     key          = "roboshop-sg.tfstate"
     region       = "us-east-1"
     encrypt      = true
-    use_lockfile = true
+    use_lockfile = true # Enables native S3 state locking
   }
 }
 
