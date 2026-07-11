@@ -12,5 +12,4 @@ locals {
     frontend_sg_id = data.aws_ssm_parameter.frontend_sg_id.value
     frontend_alb_sg_id = data.aws_ssm_parameter.frontend_alb_sg_id.value
     bastion_sg_id = data.aws_ssm_parameter.bastion_sg_id.value
-    valut_pass = data.aws_ssm_parameter.valut_pass.value
 }
